@@ -53,3 +53,55 @@ function adToCard(element) {
     document.getElementById('total-man').innerText = shopArray.length;
     displayPt(shopArray)
 }
+
+// next point js folder 
+
+function comoin() {
+    const totalePlayears = document.getElementById('total-man');
+    const totalePlayearsText = parseInt(totalePlayears.innerText);
+
+    const perPlayer = document.getElementById('main-vs');
+    const perPlayerValue = parseFloat(perPlayer.value);
+
+    perPlayer.value = '';
+
+    const playersSum = document.getElementById('going-5');
+    const playersSumText = parseFloat(playersSum.innerText);
+
+    const totalePlayearsSum = totalePlayearsText * perPlayerValue;
+
+    playersSum.innerText = totalePlayearsSum;
+}
+document.getElementById('btn-calculate').addEventListener('click', function () {
+    comoin()
+})
+document.getElementById('calculattotal').addEventListener('click', function () {
+
+    const playersSum = document.getElementById('going-5');
+    const playersSumText = parseFloat(playersSum.innerText);
+
+
+
+    const managerInput = document.getElementById('manager-input');
+    const managerInputValue = parseFloat(managerInput.value);
+
+    managerInput.value = '';
+
+    const coachInput = document.getElementById('coach-input');
+    const coachInputValue = parseFloat(coachInput.value);
+
+    coachInput.value = '';
+
+    const totaleSum = playersSumText + managerInputValue + coachInputValue;
+
+    const totaleTaka = document.getElementById('lolo');
+    const orderTotal = parseFloat(coachInput);
+    totaleTaka.value = '';
+
+    orderTotal.innerText = totaleSum;
+
+    function myFunction() {
+        alert("I am an alert box!");
+    }
+
+})
